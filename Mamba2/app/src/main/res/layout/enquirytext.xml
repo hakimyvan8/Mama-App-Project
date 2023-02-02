@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:id="@+id/headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/vadim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit your enquiry to"
+            android:textSize="20sp"
+            android:fontFamily="@font/medium"
+            android:textColor="@color/grey"/>
+
+        <TextView
+            android:id="@+id/vadimII"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/vadim"
+            android:text="User"
+            android:textSize="20sp"
+            android:fontFamily="@font/bold"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorPrimary"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/feedback_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="15dp"
+        android:textSize="14sp"
+        android:hint="Enter your feedback here"
+        android:inputType="text"
+        android:textColorHint="@color/colorAccent"/>
+
+    <Button
+        android:id="@+id/submit_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

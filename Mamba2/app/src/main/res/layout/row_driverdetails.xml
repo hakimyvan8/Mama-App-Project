@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="2dp"
+    android:background="@drawable/grad"
+    android:paddingRight="10dp"
+    app:cardElevation="10dp"
+    app:contentPadding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/orderIdTver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/light"
+            android:text="Driver Name"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/phoneTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderIdTver"
+            android:fontFamily="@font/bold"
+            android:text="Tel: " />
+
+        <TextView
+            android:id="@+id/phoneT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderIdTver"
+            android:layout_toRightOf="@+id/phoneTv"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bold"
+            android:text="07888474646774" />
+
+
+
+        <TextView
+            android:id="@+id/PaymentsTATS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneTv"
+            android:fontFamily="@font/bold"
+            android:text="Driver License: " />
+
+        <TextView
+            android:id="@+id/PaymentsTATUS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneTv"
+            android:fontFamily="@font/bold"
+            android:layout_toRightOf="@+id/PaymentsTATS"
+            android:textColor="@color/green"
+            android:text="Payment Status" />
+
+
+
+        <TextView
+            android:id="@+id/statusT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PaymentsTATUS"
+            android:fontFamily="@font/medium"
+            android:textSize="15dp"
+            android:text="Plate Number: " />
+
+
+        <TextView
+            android:id="@+id/statusTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PaymentsTATUS"
+            android:fontFamily="@font/medium"
+            android:layout_toRightOf="@+id/statusT"
+            android:textSize="15dp"
+            android:text="In Progress"
+            android:textColor="@color/green" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

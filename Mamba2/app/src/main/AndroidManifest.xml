@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.igor.mamba">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Mamba"
+        android:usesCleartextTraffic="true"
+        tools:ignore="UnusedAttribute">
+        <activity android:name=".Driverenroute"></activity>
+        <activity android:name=".User.DriverComplete" />
+        <activity android:name=".DriverselectActivity" />
+        <activity android:name=".DriverChat.driverenquiryActivity" />
+        <activity android:name=".CustomerChat.CustomerChatList" />
+        <activity android:name=".DriverChat.feedbackDriverActivity" />
+        <activity android:name=".Dispatch.dispatchHome" />
+        <activity android:name=".Dispatch.dispatchActivity" />
+        <activity android:name=".CustomerChat.FeebackActivity" />
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".Driverhome" />
+        <activity android:name=".User.DriverLogin" />
+        <activity android:name=".nonetwork" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".User.selectlogintype" />
+        <activity android:name=".ItemsPurchased" />
+        <activity android:name=".finance" />
+        <activity android:name=".stock" />
+        <activity android:name=".delivery" />
+        <activity android:name=".OrdehistoryActivity" />
+        <activity android:name=".SupFormActivity" />
+        <activity android:name=".OrderDetailsActivity" />
+        <activity android:name=".HomeSupplier" />
+        <activity android:name=".User.LoginSupplier" />
+        <activity android:name=".editProfileActivity" />
+        <activity android:name=".CheckoutActivity" />
+        <activity android:name=".CartActivity" />
+        <activity android:name=".aboutActivity" />
+        <activity android:name=".supplier" />
+        <activity android:name=".ProductDetails" />
+        <activity android:name=".ProductListActivity" />
+        <activity android:name=".SupplierLogin" />
+        <activity android:name=".Home" />
+        <activity android:name=".User.signup" />
+        <activity android:name=".User.login" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

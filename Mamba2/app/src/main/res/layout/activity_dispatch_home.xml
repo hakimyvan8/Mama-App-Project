@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+
+        <RelativeLayout
+            android:id="@+id/rel4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/shape_rect10">
+
+
+                <TextView
+                    android:id="@+id/usernameView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:drawableStart="@drawable/ic_person2"
+                    android:layout_toRightOf="@+id/textView4"
+                    android:fontFamily="@font/bold"
+                    android:text="Username"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/light"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_below="@+id/usernameView"
+                    android:text="Phone Number"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="25dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:tint="@color/white"
+                    app:srcCompat="@drawable/ic_logout" />
+
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/bold"
+                    android:layout_below="@+id/usernameView"
+                    android:text="Logout"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rel6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel5"
+            android:layout_margin="20dp">
+
+
+                <!--Tabs: Drivers, Orders-->
+                <LinearLayout
+                    android:id="@+id/tabsProd"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/textView6"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/shape_rect04"
+                    android:orientation="horizontal"
+                    tools:ignore="NotSibling">
+
+                        <!--Shop-->
+                        <TextView
+                            android:id="@+id/tabDriversTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_rect05"
+                            android:gravity="center"
+                            android:text="Drivers"
+                            android:textColor="@color/white" />
+                        <!--Orders-->
+                        <TextView
+                            android:id="@+id/tabOrdersTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Orders"
+                            android:textColor="@color/colorPrimary" />
+                </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/rel5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/rel4">
+
+        <TextView
+            android:id="@+id/dispatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Dispatch Dashboard"
+            android:textSize="15dp"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contacts"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_callblue"
+            android:layout_alignParentEnd="true"
+            android:textSize="15dp"
+            android:layout_margin="10dp"
+            android:textColor="@color/blue"/>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/searcTbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tabsProd"
+            android:orientation="horizontal">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search"
+            android:textColorHint="@color/grey"/>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_search"/>
+        </LinearLayout>
+
+        <!--Drivers UI-->
+        <RelativeLayout
+            android:id="@+id/DriversRL"
+            android:layout_below="@+id/searcTbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/DriversRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_driver" />
+        </RelativeLayout>
+
+        <!--Orders UI-->
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/ordersRL"
+            android:layout_below="@+id/toolbarRL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <!--recyclerView: show orders (newest first)-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ordersRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:stackFromEnd="true"
+                    app:reverseLayout="true"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_order_dispatch"/>
+        </RelativeLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/submitBtn"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:src="@drawable/ic_reply"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"/>
+
+</LinearLayout>

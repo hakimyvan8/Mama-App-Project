@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="2dp"
+    android:background="@drawable/shape_rect02"
+    android:paddingRight="10dp"
+    app:cardElevation="10dp"
+    app:contentPadding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/dateT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:textStyle="bold"
+            android:text="Date Registered: " />
+
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderIdTver"
+            android:layout_toRightOf="@+id/dateT"
+            android:text="22/06/2020"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+
+        <TextView
+            android:id="@+id/NameT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:layout_below="@+id/dateTv"
+            android:textStyle="bold"
+            android:text="Driver Name: " />
+
+        <TextView
+            android:id="@+id/shopNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dateTv"
+            android:layout_toRightOf="@+id/NameT"
+            android:text="Recipient Name"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+
+
+        <TextView
+            android:id="@+id/phoneTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shopNameTv"
+            android:fontFamily="@font/bold"
+            android:text="Tel: " />
+
+        <TextView
+            android:id="@+id/phoneT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shopNameTv"
+            android:layout_toRightOf="@+id/phoneTv"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bold"
+            android:text="07888474646774" />
+
+
+
+
+
+        <TextView
+            android:id="@+id/statusT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneT"
+            android:fontFamily="@font/medium"
+            android:textSize="15dp"
+            android:textColor="@color/green"
+            android:text="Available / " />
+
+
+        <TextView
+            android:id="@+id/statusTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneT"
+            android:fontFamily="@font/medium"
+            android:layout_toRightOf="@+id/statusT"
+            android:textSize="15dp"
+            android:text="Unavailable"
+            android:textColor="@color/red"/>
+
+        <TextView
+            android:id="@+id/nextIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Details"
+            android:textSize="15dp"
+            android:textColor="@color/blue"
+            android:drawableStart="@drawable/ic_eye"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
