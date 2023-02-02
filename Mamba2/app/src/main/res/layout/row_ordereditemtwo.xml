@@ -83,24 +83,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Call"
+            android:layout_toRightOf="@+id/phoneT"
+            android:fontFamily="@font/bold"
+            android:layout_marginLeft="20dp"
             android:textColor="@color/orange"
-            android:layout_below="@+id/phoneT"
-            android:drawableStart="@drawable/ic_call"/>
+            android:layout_below="@+id/amountTv"/>
 
-
-
-        <TextView
-
-            android:id="@+id/textBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="text"
-            android:textColor="@color/green"
-            android:layout_below="@+id/phoneT"
-            android:layout_centerHorizontal="true"
-            android:layout_toRightOf="@+id/callBtn"
-            android:layout_marginLeft="30sp"
-            android:drawableStart="@drawable/ic_reply"/>
 
         <TextView
             android:id="@+id/PaymentsTATS"

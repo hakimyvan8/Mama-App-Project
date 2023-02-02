@@ -16,9 +16,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
@@ -121,10 +123,6 @@ public class FeebackActivity extends AppCompatActivity implements View.OnClickLi
 
                         String msg_id = orderi.getString("msg_id");
 
-                        String receiverName = orderi.getString("ReceiverName");
-
-                        String senderName = orderi.getString("SenderName");
-
                         String from_id = orderi.getString("from_id");
 
                         String to_id = orderi.getString("to_id");
@@ -133,12 +131,9 @@ public class FeebackActivity extends AppCompatActivity implements View.OnClickLi
 
                         String sentat = orderi.getString("sentat");
 
-                        String receivernumber = orderi.getString("receivernumber");
-
-                        String sendernumber = orderi.getString("sendernumber");
 
 
-                        ChatModel chtmdl = new ChatModel(id,msg_id,receiverName,senderName,from_id,to_id,msgcont,sentat,receivernumber,sendernumber);
+                        ChatModel chtmdl = new ChatModel(id,msg_id,from_id,to_id,msgcont,sentat);
                         messages.add(chtmdl);
 
                     }
@@ -167,8 +162,6 @@ public class FeebackActivity extends AppCompatActivity implements View.OnClickLi
         };
         RequestHandle.getInstance(getApplicationContext()).addToRequestQueue(stringRequest);
     }
-
-
 
 
 
@@ -212,12 +205,8 @@ public class FeebackActivity extends AppCompatActivity implements View.OnClickLi
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("driverId", bundlex.getString("toid"));
                 params.put("FeedBack", Message);
-                params.put("receiverName", bundlex.getString("rcvrname"));
-                params.put("receiverPhone", bundlex.getString("rcvrPhone"));
                 params.put("msgid", bundlex.getString("MainId"));
                 params.put("userid", SharedPrefManager.getInstance(FeebackActivity.this).getUser().getUUID());
-                params.put("senderName", SharedPrefManager.getInstance(FeebackActivity.this).getUser().getFirstName());
-                params.put("senderNumber", SharedPrefManager.getInstance(FeebackActivity.this).getUser().getPhone());
 
                 return params;
             }
@@ -231,6 +220,12 @@ public class FeebackActivity extends AppCompatActivity implements View.OnClickLi
                 return params;
             }
         };
+        //Disabling retry to prevent duplicate messages
+        int socketTimeout = 0;
+        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        vr.setRetryPolicy(policy);
         RequestQueue requestQueue = Volley.newRequestQueue(FeebackActivity.this);
         requestQueue.add(vr);
 

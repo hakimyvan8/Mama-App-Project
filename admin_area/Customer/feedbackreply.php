@@ -9,14 +9,9 @@ $msgid = $_POST["msgid"];
 $driverId =$_POST["driverId"];
 $FeedBack =$_POST["FeedBack"];
 
-$receiverName =$_POST["receiverName"];
-$receiverPhone =$_POST["receiverPhone"];
-
-$senderName =$_POST["senderName"];
-$senderNumber =$_POST["senderNumber"];
-
-$querr = $conn->prepare("INSERT INTO msgcontent(msg_id,ReceiverName,SenderName,from_id,to_id,msgcont,sentat,receivernumber,sendernumber)
- VALUES ('$msgid','$receiverName','$senderName',$userid,'$driverId','$FeedBack',now(),'$receiverPhone','$senderNumber')");
+if($userid)
+$querr = $conn->prepare("INSERT INTO msgcontent(msg_id,from_id,to_id,msgcont,sentat)
+ VALUES ('$msgid','$userid','$driverId','$FeedBack',now())");
 $querr->execute();
 
 

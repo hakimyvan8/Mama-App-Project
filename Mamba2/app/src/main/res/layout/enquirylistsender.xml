@@ -40,16 +40,6 @@
                     android:text="Hello how are you?" />
 
 
-
-                <TextView
-                    android:id="@+id/titleViewII"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Belal Khan"
-                    android:textSize="12dp"
-                    />
-
-
                 <TextView
                     android:id="@+id/date"
                     android:layout_width="wrap_content"

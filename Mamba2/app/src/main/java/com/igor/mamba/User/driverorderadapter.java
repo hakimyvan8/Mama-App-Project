@@ -11,6 +11,8 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -20,10 +22,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
+import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.igor.mamba.Driverenroute;
+import com.igor.mamba.ItemsPurchased;
 import com.igor.mamba.R;
 import com.igor.mamba.RequestHandle;
 import com.igor.mamba.SharedPrefManagerDriver;
@@ -36,6 +42,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class driverorderadapter extends RecyclerView.Adapter<driverorderadapter.orderHolder> {
 
@@ -221,85 +229,7 @@ public class driverorderadapter extends RecyclerView.Adapter<driverorderadapter.
 
                  }
              });
-//
-//        holder.textBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(context);
-//                View dialogView = LayoutInflater.from(context).inflate(R.layout.enquirytext, null);
-//                bottomSheetDialog.setContentView(dialogView);
-//                bottomSheetDialog.show();
-//
-//
-//                EditText feedbackTxt = dialogView.findViewById(R.id.feedback_edit_text);
-//
-//                TextView driverTt = dialogView.findViewById(R.id.vadimII);
-//                Button submit = dialogView.findViewById(R.id.submit_feedback);
-//                submit.setOnClickListener(new View.OnClickListener() {
-//
-//                    @Override
-//                    public void onClick(View v) {
-//
-//                        StringRequest vr = new StringRequest(Request.Method.POST, URLs.FEEDBACK, new Response.Listener<String>() {
-//
-//
-//                            @Override
-//                            public void onResponse(String response) {
-//                                try {
-//                                    JSONObject json = new JSONObject(response);
-//
-//
-//                                } catch (JSONException e) {
-//                                    e.printStackTrace();
-//                                }
-//                            }
-//                        }, new Response.ErrorListener() {
-//                            @Override
-//                            public void onErrorResponse(VolleyError error) {
-//
-//                                //Toast.makeText(ItemsPurchased.this, error.getMessage(), Toast.LENGTH_LONG).show();
-//                            }
-//                        }) {
-//
-//                            protected Map<String, String> getParams() {
-//                               // Map<String, String> params = new HashMap<String, String>();
-//                               // params.put("driverId", drvrID);
-//                               // params.put("FeedBack", feedbackTxt.getText().toString());
-//                               // params.put("receiverName", duke);
-//                               // params.put("receiverPhone", phoneGj);
-//                              //  params.put("id", bundleII.getString("id"));
-//                                //params.put("userid", SharedPrefManagerDriver.getInstance(ItemsPurchased.this).getUser().getUUID());
-//                               // params.put("senderName", SharedPrefManagerDriver.getInstance(ItemsPurchased.this).getUser().getFirstName());
-//                               // params.put("senderNumber", SharedPrefManagerDriver.getInstance(ItemsPurchased.this).getUser().getPhone());
-//
-//                               // return params;
-//                            }
-//
-//                            @Override
-//                            public Map<String, String> getHeaders() throws AuthFailureError {
-//                                Map<String, String> params = new HashMap<String, String>();
-//                                params.put("Content-Type", "application/x-www-form-urlencoded");
-//
-//                                return params;
-//                            }
-//                        };
-//                        RequestQueue requestQueue = Volley.newRequestQueue(ItemsPurchased.this);
-//                        requestQueue.add(vr);
-//
-//                        new SweetAlertDialog(ItemsPurchased.this, SweetAlertDialog.SUCCESS_TYPE).setTitleText("Message Sent!").setContentText("Message sent to "+duke+"Succesfully !!").setConfirmText("close").setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {@Override
-//                        public void onClick(SweetAlertDialog sDialog) {
-//                            // Showing simple toast message to user
-//
-//                            startActivity(new Intent(getApplicationContext(), enquirydriverlistActivity.class));
-//                        }
-//                        }).show();
-//
-//
-//                    }
-//                });
-//            }
-//        });
+
     };
 
 
@@ -312,7 +242,7 @@ public class driverorderadapter extends RecyclerView.Adapter<driverorderadapter.
     public class orderHolder extends RecyclerView.ViewHolder {
 
         RelativeLayout rel;
-        ImageView callBtn,textBtn;
+        TextView callBtn;
         TextView ordernumber,orderlocation,ordername,status,phonenumber;//orderIdTver,statusTv,shopNameTv,amountTv,dateTv;
 
         public orderHolder(@NonNull View itemView) {
@@ -325,7 +255,6 @@ public class driverorderadapter extends RecyclerView.Adapter<driverorderadapter.
             ordername = itemView.findViewById(R.id.shopNameTv);
              status = itemView.findViewById(R.id.statusTv);
              callBtn = itemView.findViewById(R.id.callBtn);
-             textBtn = itemView.findViewById(R.id.textBtn);
         }
     }
 }

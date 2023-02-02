@@ -29,7 +29,7 @@ $stmtupdateorderlist->fetch();
 $stmtupdateorderlist->close();
 
 
-$querr = $conn->prepare("INSERT INTO msgcontent(msg_id,ReceiverName,SenderName,from_id,to_id,msgcont,sentat,receivernumber,sendernumber) VALUES ('$msg_id','$receiverName','$senderName',$userid,'$driverId','$FeedBack',now(),'$receiverPhone','$senderNumber')");
+$querr = $conn->prepare("INSERT INTO msgcontent(msg_id,from_id,to_id,msgcont,sentat) VALUES ('$msg_id','$userid','$driverId','$FeedBack',now())");
 $querr->execute();
 
 
