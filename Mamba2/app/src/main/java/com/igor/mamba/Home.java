@@ -269,6 +269,10 @@ public class Home extends AppCompatActivity implements Runnable{
         RequestHandle.getInstance(Home.this).addToRequestQueue(stringRequest);
     }
 
+
+
+
+    //load products on the app
     private void loadProducts() {
         recyclerView = findViewById(R.id.itemRv);
            GridLayoutManager linearLayoutManager = new GridLayoutManager(this, 2, androidx.recyclerview.widget.GridLayoutManager.VERTICAL,false) ;
@@ -295,6 +299,9 @@ public class Home extends AppCompatActivity implements Runnable{
                                 String price = employee.getString("price");
                                 String unitStored = employee.getString("quantity");
                                 String product_desc = employee.getString("summary");
+                                String productExpiry = employee.getString("expiryDate");
+                                String productBatch = employee.getString("batchNumber");
+                                String productManDate = employee.getString("manufacturedDate");
 
 
                                String url = "http://"+URLs.IP+"/admin_area/product_images/"+image;
@@ -306,6 +313,9 @@ public class Home extends AppCompatActivity implements Runnable{
                                 product.setUnitsStored(unitStored);
                                 product.setProduct_desc(product_desc);
                                 product.setProduct_id(product_id);
+                                product.setExpiryDate(productExpiry);
+                                product.setBatchNumber(productBatch);
+                                product.setManufacturedDate(productManDate);
                                 product.setQuant(0);
                                 productList.add(product);
 
@@ -410,6 +420,13 @@ public class Home extends AppCompatActivity implements Runnable{
                             new NotificationHandler(getApplicationContext()).showNotificationMessage(String.valueOf(dateformat),
                                     "Order # " + userJson.getString("OrderNumber") + "  Approved at " + userJson.getString("timeUpdate"),
                                     "Delivery Completed " + userJson.getString("Trackingid"), userJson.getString("OrderNumber"), userJson.getString("status"), userJson.getString("timeUpdate"),userJson.getString("Trackingid"),userJson.getString("location"),userJson.getString("driver"));
+
+                        }
+
+                        else if(TextUtils.equals(userJson.getString("status"),"5")) {
+                            new NotificationHandler(getApplicationContext()).showNotificationMessage(String.valueOf(dateformat),
+                                    "Order # " + userJson.getString("OrderNumber") + "  Cancelled " + userJson.getString("timeUpdate"),
+                                    "Order Cancelled " + userJson.getString("Trackingid"), userJson.getString("OrderNumber"), userJson.getString("status"), userJson.getString("timeUpdate"),userJson.getString("Trackingid"),userJson.getString("location"),userJson.getString("driver"));
 
                         }
                     }

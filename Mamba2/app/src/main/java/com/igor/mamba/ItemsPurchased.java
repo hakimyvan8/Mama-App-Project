@@ -25,7 +25,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.igor.mamba.CustomerChat.CustomerChatList;
-import com.igor.mamba.Dispatch.dispatchModel;
+import com.igor.mamba.Dispatch.Dispatch;
 import com.igor.mamba.User.Driver;
 
 import org.json.JSONArray;
@@ -58,13 +58,13 @@ public class ItemsPurchased extends AppCompatActivity {
 
     List<financeModel> fin;
 
-    List<dispatchModel> disp;
+    List<Dispatch> disp;
 
     private static String JSON_URL = URLs.PURCHASEDITEMS;
     itemspurchasedadapter adapter;
 
     driverdetailadapter adapterII;
-    Bundle bundle, bundleII, bundleIII;
+    Bundle bundle, bundleII;
     int num;
 
     @Override
@@ -202,12 +202,16 @@ public class ItemsPurchased extends AppCompatActivity {
                         String duke = driveri.getString("FullName");
                         String drvrID = driveri.getString("driverID");
                         String numbrPLate = driveri.getString("NumberPlate");
+                        String status = driveri.getString("status");
+                        String adminemail = driveri.getString("admin_email");
 
                         driverdetail dets = new driverdetail();
                         dets.setFullName(duke);
                         dets.setDriverID(drvrID);
                         dets.setPhone(phoneGj);
                         dets.setNumberPlate(numbrPLate);
+                        dets.setStatus(status);
+                        dets.setAdmin_email(adminemail);
                         dyga.add(dets);
 
 
@@ -390,7 +394,7 @@ public class ItemsPurchased extends AppCompatActivity {
                                 String disPContact = driveri.getString("admin_contact");
                                 String disJob = driveri.getString("admin_job");
 
-                                dispatchModel dis = new  dispatchModel();
+                                Dispatch dis = new Dispatch();
                                 dis.setAdmin_id(disId);
                                 dis.setAdmin_contact(disPContact);
                                 dis.setAdmin_job(disJob);

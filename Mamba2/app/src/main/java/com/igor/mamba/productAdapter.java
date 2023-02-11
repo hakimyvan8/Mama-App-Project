@@ -78,6 +78,7 @@ public class productAdapter extends RecyclerView.Adapter<productAdapter.ProductV
 
         DecimalFormat decimalFormat = new DecimalFormat("R₣ #,###.00", symbols);
         holder.textViewTitle.setText(product.getProduct_title());
+        holder.expII.setText(product.getExpiryDate());
 //        holder.instock.setText(prodStatus);
       holder.textViewPrice.setText(decimalFormat.format(Integer.valueOf(String.valueOf(product.getProduct_price()))));
         holder.instock.setTextColor(context.getResources().getColor(R.color.green));
@@ -127,7 +128,7 @@ public class productAdapter extends RecyclerView.Adapter<productAdapter.ProductV
     }
 
     public class ProductView extends RecyclerView.ViewHolder {
-        TextView textViewTitle,textViewPrice,addView,instock;
+        TextView textViewTitle,textViewPrice,addView,instock,expII;
         ImageView imageView;
 
         public ProductView(@NonNull View itemView) {
@@ -138,6 +139,7 @@ public class productAdapter extends RecyclerView.Adapter<productAdapter.ProductV
             instock = itemView.findViewById(R.id.instock);
             textViewPrice = itemView.findViewById(R.id.priceView);
             imageView = itemView.findViewById(R.id.imageprod);
+            expII = itemView.findViewById(R.id.expII);
         }
     }
 }

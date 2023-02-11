@@ -37,7 +37,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:orientation="vertical"
         android:layout_below="@+id/detailsRel1">
@@ -153,7 +153,6 @@
             android:id="@+id/unistored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
             android:text="Units Stored:"
             android:textColor="@color/black"/>
 

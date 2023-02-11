@@ -23,6 +23,8 @@ import com.igor.mamba.R;
 import com.igor.mamba.URLs;
 import com.igor.mamba.User.Dispatch;
 import com.igor.mamba.User.RequestHandler;
+import com.igor.mamba.User.login;
+import com.igor.mamba.User.selectlogintype;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -74,7 +76,8 @@ public class dispatchActivity extends AppCompatActivity implements View.OnClickL
         signa.setOnClickListener(new View.OnClickListener() {
                                      @Override
                                      public void onClick(View v) {
-                                         onBackPressed();
+                                         startActivity(new Intent(getApplicationContext(), selectlogintype.class));
+                                         dispatchActivity.this.finish();
                                      }
                                  }
         );

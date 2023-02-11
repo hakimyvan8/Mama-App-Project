@@ -9,7 +9,7 @@ import android.view.View;
 import com.igor.mamba.Driverhome;
 import com.igor.mamba.R;
 import com.igor.mamba.SharedPrefManagerDriver;
-import com.igor.mamba.SupplierLogin;
+import com.igor.mamba.Supplier.SupplierLogin;
 import com.igor.mamba.Dispatch.dispatchActivity;
 import com.igor.mamba.finance;
 import com.igor.mamba.stock;

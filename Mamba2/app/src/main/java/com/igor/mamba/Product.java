@@ -13,11 +13,14 @@ public class Product implements Serializable
     String product_desc;
     String RemainingUnits;
     String status;
+    String expiryDate;
+    String batchNumber;
+    String manufacturedDate;
 
     public Product() {
     }
 
-    public Product(int product_id, int quant,String product_title, String product_price, String product_img1,String unitsStored,String RemainingUnits,String product_desc,String status) {
+    public Product(int product_id, int quant,String product_title, String product_price, String product_img1,String unitsStored,String RemainingUnits,String product_desc,String status, String expiryDate, String batchNumber, String manufacturedDate) {
         this.product_id = product_id;
         this.quant = quant;
         this.product_title = product_title;
@@ -27,6 +30,9 @@ public class Product implements Serializable
         this.RemainingUnits = RemainingUnits;
         this.product_desc = product_desc;
         this.status = status;
+        this.expiryDate = expiryDate;
+        this.batchNumber = batchNumber;
+        this.manufacturedDate = manufacturedDate;
     }
 
     public int getProduct_id() {
@@ -99,5 +105,29 @@ public class Product implements Serializable
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getExpiryDate() {
+        return expiryDate;
+    }
+
+    public void setExpiryDate(String expiryDate) {
+        this.expiryDate = expiryDate;
+    }
+
+    public String getBatchNumber() {
+        return batchNumber;
+    }
+
+    public void setBatchNumber(String batchNumber) {
+        this.batchNumber = batchNumber;
+    }
+
+    public String getManufacturedDate() {
+        return manufacturedDate;
+    }
+
+    public void setManufacturedDate(String manufacturedDate) {
+        this.manufacturedDate = manufacturedDate;
     }
 }

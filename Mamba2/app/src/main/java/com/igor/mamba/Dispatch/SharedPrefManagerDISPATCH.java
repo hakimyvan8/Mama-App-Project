@@ -80,7 +80,7 @@ public class SharedPrefManagerDISPATCH {
         editor.clear();
         editor.apply();
 
-        Intent intent = new Intent(mCtx, login.class);
+        Intent intent = new Intent(mCtx, dispatchActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mCtx.startActivity(intent);
 

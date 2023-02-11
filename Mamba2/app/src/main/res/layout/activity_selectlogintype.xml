@@ -64,6 +64,20 @@
 
 
         <Button
+            android:id="@+id/button11"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/colorAccent"
+            android:drawableRight="@drawable/ic_baseline_account_circle_24"
+            android:fontFamily="@font/light"
+            android:paddingBottom="10dp"
+            android:text="Supplier "
+            android:textColor="@color/white" />
+
+
+
+        <Button
         android:id="@+id/button8"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -90,21 +104,6 @@
             android:visibility="invisible"
             android:text="Finance Manager "
             android:textColor="@color/white" />
-
-
-        <Button
-            android:id="@+id/button11"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginBottom="1dp"
-            android:background="@color/colorAccent"
-            android:drawableRight="@drawable/ic_baseline_account_circle_24"
-            android:fontFamily="@font/light"
-            android:visibility="invisible"
-            android:paddingBottom="10dp"
-            android:text="Supplier "
-            android:textColor="@color/white" />
-
     </LinearLayout>
 
     <TextView

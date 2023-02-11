@@ -106,13 +106,11 @@ public class FeebackActivity extends AppCompatActivity implements View.OnClickLi
     private void fetchMessages() {
         dialog.dismiss();
 
-        messages.clear();
-
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URLs.CHATDETAILS, new Response.Listener<String>() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onResponse(String response) {
-
+                messages.clear();
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     JSONArray jsonArray = jsonObject.getJSONArray("data");
@@ -172,6 +170,7 @@ public class FeebackActivity extends AppCompatActivity implements View.OnClickLi
         final String Message = editTextMessage.getText().toString().trim();
         if (Message.equalsIgnoreCase(""))
             return;
+
 
         adapter.notifyDataSetChanged();
 

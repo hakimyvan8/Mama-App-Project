@@ -8,6 +8,8 @@ public class URLs {
     public static final String URL_LOGIN= ROOT_URL+"login.php";
     public static final String URL_LOGINDRIVER= ROOT_URL+"driverlogin.php";
     public static final String URL_RESSETPASS= "http://"+IP+"/admin_area/resetpassword.php";
+    public static final String INCOMINGORDER= "http://"+IP+"/admin_area/Incomingorder.php";
+    public static final String INCOMINGORDERASSIGNED= "http://"+IP+"/admin_area/IncomingorderAssigned.php";
     public static final String URL_STATUS= ROOT_URL+"statuschecker.php";
     public static final String URL_ADDTOCART= ROOT_URL+"cart.php";
     public static final String URL_SUPPLIERLOGIN= ROOT_URL+"loginSUPPLIER.php";
@@ -20,12 +22,17 @@ public class URLs {
     public static final String FEEDBACKREPLY = "http://"+URLs.IP+"/admin_area/Customer/feedbackreply.php";
     public static final String FEEDBACKDRIVER = "http://"+URLs.IP+"/admin_area/Customer/feedbackDriver.php";
     public static final String DRIVERDETAILS = "http://"+URLs.IP+"/admin_area/Customer/loadorderdriver.php";
+    public static final String DRIVER = "http://"+URLs.IP+"/admin_area/Customer/loaddriver.php";
+    public static final String DRIVERONLINE = "http://"+URLs.IP+"/admin_area/Customer/loaddriveronline.php";
     public static final String FINANCEDETAILS = "http://"+URLs.IP+"/admin_area/Customer/populateadmins.php";
+    public static final String ADMINS = "http://"+URLs.IP+"/admin_area/Customer/admintotal.php";
     public static final String CHATDETAILS = "http://"+URLs.IP+"/admin_area/Customer/loadchats.php";
+    public static final String DRIVERCHATDETAILS = "http://"+URLs.IP+"/admin_area/Customer/loaddriverchats.php";
     public static final String DISPATCHDETAILS = "http://"+URLs.IP+"/admin_area/Customer/populateDispatch.php";
     public static final String ADMINDETAILS = "http://"+URLs.IP+"/admin_area/Customer/populateSuper.php";
     public static String driver  = ROOT_URL+"driverorder.php";
     public static String accept   =ROOT_URL+"acceptdriver.php";
+    public static String assign   =ROOT_URL+"assigndriver.php";
     public static String confirm   =ROOT_URL+"confirmorder.php";
     public static String getdeliveredorder  = ROOT_URL+"getcompletedelivery.php";
     public static String getenrouteorder  = ROOT_URL+"getdenrouteorder.php";

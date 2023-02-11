@@ -48,9 +48,6 @@ public class feedbackDriverActivity extends AppCompatActivity implements View.On
     private ProgressDialog dialog;
 
     private RecyclerView recyclerView;
-//    private RecyclerView recyclerView;
-//    ThreadDriverAdapter adapter;
-//    ArrayList<ChatDriverModel> messages;
 
     //Button to send new message on the thread
     private Button buttonSend;
@@ -88,7 +85,7 @@ public class feedbackDriverActivity extends AppCompatActivity implements View.On
         messages = new ArrayList<>();
 
         fetchMessages();
-        sendmessage();
+        //sendmessage();
 
         bundlex = getIntent().getExtras();
 
@@ -117,13 +114,15 @@ public class feedbackDriverActivity extends AppCompatActivity implements View.On
 
     //fetchMessages
     private void fetchMessages() {
+        dialog.dismiss();
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URLs.CHATDETAILS, new Response.Listener<String>() {
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URLs.DRIVERCHATDETAILS, new Response.Listener<String>() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onResponse(String response) {
-                dialog.dismiss();
+                messages.clear();
 
                 try {
                     JSONObject jsonObject = new JSONObject(response);

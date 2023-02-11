@@ -94,7 +94,7 @@ public class OrderDetailsAdapter extends RecyclerView.Adapter<OrderDetailsAdapte
             holder.statusTv.setTextColor(context.getResources().getColor(R.color.grey));
         }
 
-        if(order.getStatus() == 2) {
+        if(order.getStatus() == 5) {
             holder.statusTv.setText("Order Declined");
             holder.statusTv.setTextColor(context.getResources().getColor(R.color.red));
             holder.amountTv.setText(decimalFormat.format(order.getGrandtotal())+"(Refund)");
@@ -110,6 +110,14 @@ public class OrderDetailsAdapter extends RecyclerView.Adapter<OrderDetailsAdapte
             holder.statusTv.setTextColor(context.getResources().getColor(R.color.green));
         }
 
+
+        else if(order.getStatus() == 2)
+        {
+
+            holder.statusTv.setText("Your Order has been Assigned to Driver");
+
+            holder.statusTv.setTextColor(context.getResources().getColor(R.color.blue));
+        }
 
         else if(order.getStatus() == 4)
         {

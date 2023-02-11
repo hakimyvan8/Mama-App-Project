@@ -1,4 +1,4 @@
-package com.igor.mamba;
+package com.igor.mamba.Supplier;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,17 +16,15 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.igor.mamba.Supplier.HomeSupplier;
+import com.igor.mamba.R;
+import com.igor.mamba.SharedPrefManagerSUPPLIER;
+import com.igor.mamba.URLs;
 import com.igor.mamba.User.RequestHandler;
 import com.igor.mamba.User.Supplier;
-import com.igor.mamba.User.User;
-import com.igor.mamba.User.login;
-import com.igor.mamba.User.signup;
 
 import org.json.JSONException;
 import org.json.JSONObject;

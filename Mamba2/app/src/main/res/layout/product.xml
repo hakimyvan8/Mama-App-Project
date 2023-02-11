@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/priceView"
                 android:layout_marginLeft="5dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="70dp"
                 android:background="@drawable/shape_rect05"
                 android:drawableStart="@drawable/ic_shop"
                 android:drawablePadding="5dp"
@@ -87,6 +87,34 @@
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
+
+            <TextView
+                android:id="@+id/exp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/instock"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/light"
+                android:text="Exp. Date"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/expII"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/exp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Exp. Date"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>

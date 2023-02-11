@@ -1,6 +1,6 @@
 package com.igor.mamba;
 
-public class driverdetail {
+public class driverdetailDispatch {
 
     public String driverID;
     public String fullName;
@@ -10,7 +10,7 @@ public class driverdetail {
     public String status;
     public String admin_email;
 
-    public driverdetail() {
+    public driverdetailDispatch() {
     }
 
     public String getDriverID() {

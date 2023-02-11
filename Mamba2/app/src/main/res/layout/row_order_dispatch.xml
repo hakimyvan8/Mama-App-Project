@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="2dp"
+    android:background="@drawable/shape_rect02"
+    android:paddingRight="10dp"
+    app:cardElevation="10dp"
+    app:contentPadding="10dp">
+
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <TextView
+            android:id="@+id/dateT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date Registered: "
+            android:textColor="@color/grey"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/dateT"
+            android:text="22/06/2020"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+
+        <TextView
+            android:id="@+id/OrderT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:layout_below="@+id/dateT"
+            android:textStyle="bold"
+            android:text="Order Number: " />
+
+        <TextView
+            android:id="@+id/ordersTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dateT"
+            android:layout_toRightOf="@+id/OrderT"
+            android:text="122838838"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+
+
+        <TextView
+            android:id="@+id/NameT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:layout_below="@+id/OrderT"
+            android:textStyle="bold"
+            android:text="Name: " />
+
+        <TextView
+            android:id="@+id/shopNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/OrderT"
+            android:layout_toRightOf="@+id/NameT"
+            android:text="Recipient Name"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+
+
+        <TextView
+            android:id="@+id/phoneTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shopNameTv"
+            android:fontFamily="@font/bold"
+            android:text="Tel: " />
+
+        <TextView
+            android:id="@+id/phoneT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shopNameTv"
+            android:layout_toRightOf="@+id/phoneTv"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bold"
+            android:text="07888474646774" />
+
+
+
+
+
+        <TextView
+            android:id="@+id/statusT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneT"
+            android:fontFamily="@font/medium"
+            android:textSize="15dp"
+            android:textColor="@color/grey"
+            android:text="Payment Status: " />
+
+
+        <TextView
+            android:id="@+id/PaymentstatusTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneT"
+            android:fontFamily="@font/medium"
+            android:layout_toRightOf="@+id/statusT"
+            android:textSize="15dp"
+            android:text="Available"
+            android:textColor="@color/green"/>
+
+
+
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/AssignT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/statusT"
+            android:fontFamily="@font/medium"
+            android:textSize="15dp"
+            android:textColor="@color/grey"
+            android:text="Order Status:" />
+
+
+        <TextView
+            android:id="@+id/AssignstatusTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/statusT"
+            android:fontFamily="@font/medium"
+            android:layout_toRightOf="@+id/statusT"
+            android:textSize="15dp"
+            android:text="Assigned"
+            android:textColor="@color/green"/>
+
+
+        <TextView
+            android:id="@+id/nextIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manage Order"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/blue"
+            android:drawableStart="@drawable/ic_eye"
+            android:layout_centerVertical="true"/>
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

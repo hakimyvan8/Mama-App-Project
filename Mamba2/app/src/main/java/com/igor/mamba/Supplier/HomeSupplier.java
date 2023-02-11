@@ -1,4 +1,4 @@
-package com.igor.mamba;
+package com.igor.mamba.Supplier;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.igor.mamba.R;
+import com.igor.mamba.SupFormActivity;
 import com.igor.mamba.User.Supplier;
 
 public class HomeSupplier extends AppCompatActivity  implements Runnable {
@@ -22,22 +24,12 @@ public class HomeSupplier extends AppCompatActivity  implements Runnable {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_supplier);
 
-        newsupply = findViewById(R.id.newsupply);
         usernameView = findViewById(R.id.usernameView);
-        logout = findViewById(R.id.logout);
         homeView = findViewById(R.id.homeView);
 
 
 
 
-
-
-        newsupply.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), SupFormActivity.class));
-            }
-        });
     }
 
     @Override

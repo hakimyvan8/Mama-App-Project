@@ -37,13 +37,13 @@
         <activity android:name=".ForgotPassword" />
         <activity android:name=".User.selectlogintype" />
         <activity android:name=".ItemsPurchased" />
+        <activity android:name=".Supplier.HomeSupplier" />
         <activity android:name=".finance" />
         <activity android:name=".stock" />
         <activity android:name=".delivery" />
         <activity android:name=".OrdehistoryActivity" />
         <activity android:name=".SupFormActivity" />
         <activity android:name=".OrderDetailsActivity" />
-        <activity android:name=".HomeSupplier" />
         <activity android:name=".User.LoginSupplier" />
         <activity android:name=".editProfileActivity" />
         <activity android:name=".CheckoutActivity" />
@@ -52,7 +52,7 @@
         <activity android:name=".supplier" />
         <activity android:name=".ProductDetails" />
         <activity android:name=".ProductListActivity" />
-        <activity android:name=".SupplierLogin" />
+        <activity android:name=".Supplier.SupplierLogin" />
         <activity android:name=".Home" />
         <activity android:name=".User.signup" />
         <activity android:name=".User.login" />

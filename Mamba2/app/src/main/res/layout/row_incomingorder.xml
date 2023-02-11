@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -11,7 +12,8 @@
     android:background="@drawable/shape_rect02"
     android:paddingRight="10dp"
     app:cardElevation="10dp"
-    app:contentPadding="10dp">
+    app:contentPadding="10dp"
+    tools:ignore="MissingDefaultResource">
 
     <RelativeLayout
         android:id="@+id/rel"
@@ -19,14 +21,14 @@
         android:layout_height="match_parent">
 
 
-<!--        driver name-->
+<!--        order number-->
         <TextView
             android:id="@+id/NameT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/grey"
             android:textStyle="bold"
-            android:text="Driver Name: " />
+            android:text="Order No: " />
 
         <TextView
             android:id="@+id/shopNameTv"
@@ -39,74 +41,25 @@
             android:textSize="15sp" />
 
 
-
-
-        <!--        driver phone-->
-
-        <TextView
-            android:id="@+id/phoneTv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/shopNameTv"
-            android:fontFamily="@font/bold"
-            android:text="Tel: " />
-
-        <TextView
-            android:id="@+id/phoneT"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/shopNameTv"
-            android:layout_toRightOf="@+id/phoneTv"
-            android:textColor="@color/black"
-            android:fontFamily="@font/bold"
-            android:text="07888474646774" />
-
-
-
-
-
-        <!--        driver phone-->
-
-        <TextView
-            android:id="@+id/emailTv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/phoneTv"
-            android:fontFamily="@font/bold"
-            android:text="Email: " />
-
-        <TextView
-            android:id="@+id/emailT"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/phoneTv"
-            android:layout_toRightOf="@+id/emailTv"
-            android:textColor="@color/black"
-            android:fontFamily="@font/bold"
-            android:text="abac@gmail.com" />
-
-
-
-
         <!--        driver numberplate-->
 
         <TextView
             android:id="@+id/plateTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/emailT"
+            android:layout_below="@+id/NameT"
             android:fontFamily="@font/bold"
-            android:text="Number Plate: " />
+            android:text="Name: " />
 
         <TextView
             android:id="@+id/plateT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/emailT"
+            android:layout_below="@+id/NameT"
             android:layout_toRightOf="@+id/plateTv"
             android:textColor="@color/black"
             android:fontFamily="@font/bold"
-            android:text="RAD 2282 A" />
+            android:text="Mr XPYZY" />
 
 
 
@@ -119,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/plateTv"
             android:fontFamily="@font/bold"
-            android:text="License Number: " />
+            android:text="Date: " />
 
         <TextView
             android:id="@+id/licenseT"
@@ -129,30 +82,16 @@
             android:layout_toRightOf="@+id/licenseTv"
             android:textColor="@color/black"
             android:fontFamily="@font/bold"
-            android:text="RAD 2282 A" />
+            android:text="dd/mm/yyyy" />
 
 
-
-
-
-
-        <!--        driver availablity-->
-        <TextView
-            android:id="@+id/statusT"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/licenseTv"
-            android:fontFamily="@font/medium"
-            android:textSize="15dp"
-            android:textColor="@color/green"
-            android:text="Available" />
 
 
         <TextView
             android:id="@+id/nextIv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Manage Driver"
+            android:text="Manage Order"
             android:textSize="15dp"
             android:textColor="@color/blue"
             android:drawableStart="@drawable/ic_edit"
